@@ -113,40 +113,68 @@ body {
     }
 }
 
+ /* Style pour le bouton de retour */
+    .back-to-home {
+        position: fixed;
+        bottom: 20px; /* Distance du bas de la page */
+        left: 50%; /* Centrer horizontalement */
+        transform: translateX(-50%); /* Ajuster pour centrer */
+        background-color: #ccc;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .back-to-home:hover {
+        background-color: #bbb;
+    }
+
 </style>
 
 <div class="wrapper">
-        <div class="logo">
-            <img src="img/png.jpg" alt="bool's logo">
-        </div>
-        <div class="text-center mt-4 name">
-            Bool's Agence Connexion
-        </div>
-        <form class="p-3 mt-3">
-        
-        	<div class="form-field d-flex align-items-center">
-                <span class="far fa-user"></span>
-                <input type="text" name="id" placeholder="Votre identifiant">
-            </div>
-            <div class="form-field d-flex align-items-center">
-                <span class="far fa-user"></span>
-                <input type="email" name="email" placeholder="Votre Email">
-            </div>
-            <div class="form-field d-flex align-items-center">
-                <span class="fas fa-key"></span>
-                <input type="password" name="password" id="pwd" placeholder="Mot de Pass">
-            </div>
-            <button class="btn mt-3">Connexion</button>
-        </form>
-        <div class="text-center fs-6">
-            <a href="#">Mot de pass oublié ?</a> ou <a href="#">Creer un compte</a>
-        </div>
+    <div class="logo">
+        <img src="img/png.jpg" alt="bool's logo">
     </div>
-
-
-   <script>
+    <div class="text-center mt-4 name">
+        Bool's Agence Connexion
+    </div>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="id" placeholder="Votre identifiant">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="email" name="email" placeholder="Votre Email">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Mot de Passe">
+        </div>
+       <div class="form-field d-flex align-items-center">
+    <label for="userType">Type:</label>
+    <select  name="type">
+        <option value="gestionnaire">Gestionnaire</option>
+        <option value="chef">Chef</option>
+    </select>
+</div>
+       
+        <button class="btn mt-3">Connexion</button>
+    </form>
+    
+     <!-- Bouton pour retourner à la page d'accueil -->
+    <button class="back-to-home" onclick="returnHome()">Retour à l'accueil</button>
+    
+    
+    <script>
+    function returnHome() {
+        window.location.href = "Acceuil.jsp"; // Remplacez par l'URL de votre page d'accueil
+    }
+</script>
    
-   
-   </script>
+</div>
+
 </body>
 </html>
